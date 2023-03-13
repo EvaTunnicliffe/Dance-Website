@@ -8,3 +8,5 @@ Investigating into
  - Python
  - Flask
  - SQLite
+
+## Starting it
