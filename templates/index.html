@@ -1,0 +1,141 @@
+{% extends "layout.html" %}
+
+{% block title %}
+LA Dance
+{% endblock %}
+
+
+{% block content %}
+
+<div class="container-fluid position-relative">
+<img class="img-responsive" src="static/images/Coverphoto.jpg" alt="Cover Photo">
+</div>
+
+<br>
+    <h1 class="line_across"><b><i>About us</i></b></h1>
+<! --- Three links --- !>
+<div class = "container-lg">
+<div class="container w-md-50">
+<div class="row">
+    <div class="col-sm-4 position-relative" >
+        <img class="img-fluid" src="static/images/Class_Timetables.jpg" alt="Timetable Photo">
+ <div class="hero-text">
+          <a href="/classes">Classes</a>
+        </div>
+    </div>
+
+    <div class="col-sm-4 position-relative">
+        <img class="img-fluid" src="static/images/Teachers.jpg" alt="Teacher Photo">
+        <div class="hero-text">
+            <a href="/teachers">Teachers</a>
+        </div>
+    </div>
+
+    <div class="col-sm-4 position-relative">
+        <img class="img-fluid" src="static/images/Enrol.jpg" alt="Enrol Photo">
+        <div class="hero-text">
+            <a href="/enrol">Enrol</a>
+        </div>
+    </div>
+</div>
+    </div>
+
+
+    <br>
+    <br>
+
+<! --- About us --- !>
+
+  <div class = "row">
+    <div class="col-md-4 notices ">
+      <h4><b>---- Today's Classes ----</b></h4>
+        <p><b>Date: Monday 4th April 2023</b></p>
+        <p>3:00pm - 3:30pm: Intro to Jazz</p>
+        <p>3:30pm - 4:15pm: Grade 3 Ballet</p>
+        <p>4:15pm - 5:00pm: Level 1 Contemporary</p>
+        <p>5:00pm - 5:45pm: Grade 4 Ballet</p>
+        <p>5:45pm - 6:45pm: Adv 1/Grade 8 Ballet</p>
+        <p>6:45pm - 7:30pm: Inter 2 Jazz</p>
+        <p>7:30pm - 8:15pm: Inter Found Ballet</p>
+
+
+
+      </div>
+
+      <div class = "col-md-8 p-4">
+        <h3 class="line_across"><b>About LA Dance</b></h3>
+        <h5><i>LA Dance has been teaching in Kelburn and Karori, Wellington for over 30 years. </i></h5><p class="p">We offer classes in ballet, jazz, tap and contemporary. We run our younger classes in a spirit of creativity and fun, while our older students go on to develop a sound technique for exams and stage productions.</p>
+        <p class="p">We are proud to be the official location for the Ready Set Dance pre-school dance programme in Karori. Ready Set Dance is endorsed by early learning experts and focuses on developing the 3 C’s – Coordination, Creativity and Confidence!</p>
+        <p class="p">Our aim is to give our students not just an appreciation of dance but to also learn life skills – humour, discipline, friendship and respect.</p>
+      </div>
+  </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+<br>
+<div class="container">
+
+
+ <! --- Slideshow ---!>
+<div class="container">
+    <h2 class="line_across"><b>The Show</b></h2>
+
+
+    <div class="carousel-container center">
+
+    <p class="text-center">The highlight of our year is our annual show whether this be our full dance school production held every second year, or our end of year recital held in the off year. These are carefully prepared shows involving the whole school. Costumes are sourced for the show (so no sewing required) as well as props, light design and much much more! Many of our teachers also contribute by choreographing original pieces. </p>
+
+    <div id="dancegallery" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#dancegallery" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#dancegallery" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#dancegallery" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#dancegallery" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    <button type="button" data-bs-target="#dancegallery" data-bs-slide-to="4" aria-label="Slide 5"></button>
+    <button type="button" data-bs-target="#dancegallery" data-bs-slide-to="5" aria-label="Slide 6"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="static/images/Slideshow-1.jpg" class="d-block w-100" alt="...">
+      </div>
+    <div class="carousel-item">
+      <img src="static/images/Slideshow-2.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="static/images/Slideshow-3.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="static/images/Slideshow-4.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="static/images/Slideshow-5.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="static/images/Slideshow-6.jpg" class="d-block w-100" alt="...">
+    </div>
+
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#dancegallery" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#dancegallery" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+</div>
+</div>
+    </div>
+
+{% endblock %}

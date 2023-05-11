@@ -10,6 +10,7 @@
 body{
 font-family: sans-serif;
     font-size: 100%;
+    margin: 3em 0 0 0;
     background-color: var(--brand-background);
 }
 
@@ -40,6 +41,37 @@ h5{
 p{
     font-size: 1.15em;
 }
+
+
+/* line behind titles */
+.line_across {
+    border: 0px solid red;
+    padding:0;
+    overflow: hidden;
+    color: black;
+    font-weight: bold;
+    display: table;
+    white-space: nowrap;
+    margin: 0.75em 0;
+}
+.line_across:before, .line_across:after {
+    border-top: 3px solid rgb(110, 110, 110);
+    content: '';
+    display: table-cell;
+    position: relative;
+    top: 0.65em;
+    width: 50%;
+}
+.line_across:before { right: 3%; }
+.line_across:after { left: 3%; }
+
+
+
+
+
+
+
+
 
 .text-center{
     text-align: center;
@@ -146,6 +178,7 @@ color: black;}
 .row{
     padding: 1em;
 }
+
 
 
 

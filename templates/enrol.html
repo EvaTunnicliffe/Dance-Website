@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Enrol
+{% endblock %}
+
+
+{% block content %}
+
+<img src="static/images/Enrolform.jpg">
+<h1>Enrol</h1>
+<div class="container-lg">
+
+        <p class="body-text">Please fill out this form if you are interested in becoming part of the LA Dance family.</p>
+    <div class="container-lg p-3">
+        <form action="/enrol" method="POST">
+    <div>
+        <label for="fullname" class="form-label">Full Name</label>
+        <input type="text" class="form-control" id="fullname" name="fullname" placeholder="" value="{{fullname}}" required>
+    </div>
+
+    <div>
+        <label for="email" class="form-label" >Email Address</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="" value="{{email}}" required>
+    </div>
+
+    <div>
+        <label for="age" class="form-label" >Age</label>
+        <input type="number" class="form-control" id="age" name="age" min="2" max="30" placeholder="" value="{{age}}" required>
+    </div>
+
+    <div>
+        <label for="aboutme" class="form-label" >What dance would you like to learn and what experience do you have if any?</label>
+        <textarea id="aboutme" class="form-control" name="aboutme" rows="5">{{aboutme}}</textarea>
+    </div>
+
+
+        <div>
+        <label for="problems" class="form-label" >Do you have any injuries that we need to be aware of?</label>
+        <textarea id="problems" class="form-control" name="problems" rows="3">{{problems}}</textarea>
+    </div>
+
+
+    <div>
+  <label for="consent" class="form-label" >Do you consent to having photos taken of you while dancing and in the studio?</label>
+  <input type="text" class="form-control" placeholder="Yes/No" id="consent" name="consent" value="{{consent}}">
+
+</div>
+
+<div>
+    <label for="how" class="form-label">And lastly, how did you hear about us?</label>
+    <textarea id="how" class="form-control" name="how" rows="3">{{how}}</textarea>
+</div>
+
+
+
+            <div class="text-end">
+
+                <button type="reset" class="btn btn-primary">Reset</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>
+{% endblock %}

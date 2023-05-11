@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Confirm
+{% endblock %}
+
+{% block content %}
+
+<br>
+<h1>Your details</h1>
+<div class="container-lg">
+
+
+    <table class="table">
+      <tr><td>Full name: </td><td>{{form_data['fullname']}}</td></tr>
+      <tr><td>Email: </td><td>{{form_data['email']}}</td></tr>
+      <tr><td>Age: </td><td>{{form_data['age']}}</td></tr>
+      <tr><td>About You: </td><td>{{form_data['aboutme']}}</td></tr>
+      <tr><td>Any Injuries:</td><td>{{form_data['problems']}}</td></tr>
+      <tr><td>Consent for photos:</td><td>{{form_data['consent']}}</td></tr>
+      <tr><td>How did you hear:</td><td>{{form_data['how']}}</td></tr>
+
+
+    </table>
+
+<div class="confirmbtn">
+    <a href="/" class="btn btn-primary">Cancel</a>
+    <a href="/" class="btn btn-primary">Confirm</a>
+    <a href="{{ url_for('enrol', **form_data) }}" class="btn btn-primary">Edit</a>
+</div>
+
+
+
+</div>
+
+
+
+
+  <div class="row">
+    <div class="col-sm-6 " >
+        <img class="img-fluid" src="static/images/Confirm1.jpg" alt="Timetable Photo">
+    </div>
+
+    <div class="col-sm-6 ">
+        <img class="img-fluid" src="static/images/Confirm2.jpg" alt="Teacher Photo">
+
+    </div>
+
+  </div>
+
+
+
+
+{% endblock %}
