@@ -243,6 +243,8 @@ font-size: 25px;}
 
 }
 
+
+
 .card-header{font-weight: bold;
  background-color: rgba(21, 45, 126, 0.6);
     color: white;}
@@ -252,12 +254,14 @@ font-size: 25px;}
 background-color: rgba(21, 45, 126, 0.15);
     }
 
+.login{
+    text-align: right;
+}
 
-
-
-
-
-
+.alert{
+    color:red;
+    text-align: center;
+}
 
 footer{
     background-color: var(--brand-blue);

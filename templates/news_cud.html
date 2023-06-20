@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Notices
+{% endblock %}
+
+{% block content %}
+
+
+<br>
+
+    <div class="container-lg" style="width: 60%;">
+        <p class="body-text">Please enter/update your notice item.</p>
+        <form action="{{url_for('news_cud', id=id, task=task)}}" method="POST">
+
+    <div>
+        <label for="title" class="form-label">Title</label>
+        <input type="text" class="form-control" id="title" name="title" placeholder="" value="{{title}}" required>
+    </div>
+
+    <div>
+        <label for="subtitle" class="form-label" >Subtitle</label>
+        <input type="text" class="form-control" id="subtitle" name="subtitle" placeholder="" value="{{subtitle}}" required>
+    </div>
+
+    <div>
+        <label for="content" class="form-label" >Content</label>
+        <textarea class="form-control" id="content" name="content" rows="5" required>{{content}}</textarea>
+    </div>
+
+
+
+            <div class="text-end">
+
+                <button type="reset" class="btn btn-primary">Reset</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+
+    </form>
+    </div>
+
+{% endblock %}
