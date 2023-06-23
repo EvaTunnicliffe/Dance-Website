@@ -123,6 +123,7 @@ def news_cud():
 
 @app.route('/login', methods=["GET", "POST"])
 def login():
+    error = "Your credentials are not recognised"
     if request.method == "GET":
         return render_template("/login.html", email='vanny@yahoo.com', password='temp')
     elif request.method == "POST":
@@ -133,14 +134,15 @@ def login():
         result = run_search_query_tuples(sql, values_tuple, db_path, True)
         if result:
             result = result[0]
-            print(result)
-            print(result['name'])
-            print(result['password'])
-            print(result['authorisation'])
-            return "<h1> Result is recognised</h1>"
+            if result['password'] == f['password']:
+                print("Login okay")
+                return redirect(url_for('index'))
+            else:
+                return render_template("/login.html", email='vanny@yahoo.com', password='temp', error=error)
+
         else:
-            error = "Your credentials are not recognised"
             return render_template("/login.html", email='vanny@yahoo.com', password='temp', error=error)
+
 
 
 if __name__ == "__main__":

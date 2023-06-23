@@ -2,6 +2,7 @@
 
 drop table if exists news;
 drop table if exists member;
+drop table if exists classes;
 
 /* create tables */
 
@@ -21,6 +22,15 @@ create table news(
     newsdate date not null ,
     member_id integer not null,
     foreign key(member_id) references member(member_id)
+);
+
+create table classes(
+    class_id integer primary key autoincrement not null,
+    day text not null,
+    startdatetime date not null,
+    enddatetime date not null,
+    title text not null,
+    site text not null
 );
 
 insert into member( name, email, password, authorisation)
