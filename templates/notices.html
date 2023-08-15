@@ -9,16 +9,16 @@ Notices
 
 <div class="container">
 <br><br>
-<h1>Hello</h1>
+<h1>Notices</h1>
 
 
 
 
 <div class="card center" style="width: 50rem;">
   <div class="card-body" >
+      {% if session and session['authorisation'] == 0 %}
           <a href="{{ url_for( 'news_cud', id=0, task='add' ) }}" class="btn btn-primary" style="text-align: right;" >Add New</a>
-
-<hr>
+<hr>    {% endif %}
 
     {% for row in news %}
       <div class="" >
@@ -28,11 +28,13 @@ Notices
     <div class="news-meta">Posted by {{row['name']}} on {{ row['newsdate'] | newsdate }} </div>
 
 
+{% if session and session['authorisation'] == 0 %}
     <a href="{{ url_for( 'news_cud', id=row['news_id'], task='update' ) }}" class="btn b tn-primary">Update</a>
     <a href="{{ url_for( 'news_cud', id=row['news_id'], task='delete' ) }}" class="btn btn-primary">Delete</a>
-    <hr>
-
+{% endif %}
         </div>
+      <hr>
+
 
       {% endfor %}
 

@@ -10,9 +10,10 @@
 body{
 font-family: sans-serif;
     font-size: 100%;
-    margin: 3em 0 0 0;
     background-color: var(--brand-background);
 }
+
+.btn-outline{padding-right: 1em;}
 
 
 h1 {
@@ -64,13 +65,6 @@ h1:before { right: 3%; }
 h1:after { left: 3%; }
 
 
-
-
-
-
-
-
-
 .text-center{
     text-align: center;
 }
@@ -106,8 +100,6 @@ color: black;}
 
 /*--- Nav bar ---*/
 .navbar{
-    padding:5px;
-    
     color: white;
 }
 
@@ -139,6 +131,14 @@ color: black;}
 .nav-img{
     max-width: 120px;
     padding-left: 15px;
+}
+
+.authorisation{
+    background-color: var(--brand-blue);
+    color: white;
+    padding-left: 12px;
+    padding-bottom: 5px;
+    text-align: center;
 }
 
 .col-container{

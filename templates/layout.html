@@ -18,10 +18,9 @@
 
 <body>
 
-
 <! --- NavBar --- !>
-<div class="container-fluid">
-    <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+
+    <nav class="navbar navbar-expand-lg sticky-top navbar-dark">
         <a class="navbar-brand" href="#"><img class="nav-img" src="static/images/LADancelogo.jpg" alt="logo"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -47,15 +46,26 @@
           <a class="nav-link" href="/enrol">Enrol</a>
         </li>
 
-        <li class="nav-item">
-          <a class="nav-link" href="/login">Login</a>
-        </li>
-
-
-
            </ul>
     </div>
+
+
+<div class="ms-auto">
+    {% if session %}
+    <a class="nav-link btn btn-outline" href="/logout">Logout</a>
+    {% else %}
+    <a class="nav-link btn btn-outline" href="/login">Login</a>
+    {% endif %}
+</div>
+
     </nav>
+
+<div class="container-fluid" >
+    {% if session %}
+        <div class="session authorisation">
+        {{ session['name']}} is logged in.
+        </div>
+        {% endif %}
 </div>
 
 

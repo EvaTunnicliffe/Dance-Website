@@ -1,35 +1,37 @@
-Day,Start,End,Title,Site
-Monday,16:15:00,17:15:00,Inter 2 Jazz,St Michaels Kelburn
-Monday,17:15:00,18:15:00,Inter 3 Jazz,St Michaels Kelburn
-Monday,18:15:00,19:15:00,Adv 1 Jazz,St Michaels Kelburn
-Tuesday,15:30:00,16:15:00,Grade 3 Ballet,St Michaels Kelburn
-Tuesday,16:15:00,17:00:00,Level 1 comtemp,St Michaels Kelburn
-Tuesday,17:00:00,17:45:00,Grade 4 Ballet,St Michaels Kelburn
-Tuesday,17:45:00,18:45:00,Grade 8 Ballet,St Michaels Kelburn
-Tuesday,18:45:00,19:30:00,Inter 2 Jazz,St Michaels Kelburn
-Tuesday,19:30:00,20:15:00,Inter Found Ballet,St Michaels Kelburn
-Wednesday,15:30:00,16:00:00,Beginner Jazz,St Michaels Kelburn
-Wednesday,16:05:00,16:35:00,Beginner Tap,St Michaels Kelburn
-Wednesday,16:40:00,17:25:00,Grade 3 Ballet,St Michaels Kelburn
-Wednesday,17:30:00,18:15:00,Level 5 Jazz,St Michaels Kelburn
-Wednesday,18:15:00,19:15:00,Adv 2 Ballet,St Michaels Kelburn
-Wednesday,19:15:00,20:15:00,Adv 1 Jazz,St Michaels Kelburn
-Wednesday,17:15:00,18:00:00,Inter Open Tap,St Teresa's Karori
-Wednesday,18:00:00,18:45:00,Adv Open Tap,St Teresa's Karori
-Wednesday,18:45:00,19:15:00,Beginer Adult Tap,St Teresa's Karori
-Wednesday,19:00:00,19:45:00,Inter Adult Tap,St Teresa's Karori
-Thursday,15:45:00,16:15:00,Beginner Ballet,St Michaels Kelburn
-Thursday,16:15:00,17:15:00,Elem 2 Jazz,St Michaels Kelburn
-Thursday,17:15:00,18:00:00,Grade 4 Ballet,St Michaels Kelburn
-Thursday,18:00:00,18:45:00,Elem 3 Jazz,St Michaels Kelburn
-Thursday,18:45:00,19:30:00,Level 2 comtemp,St Michaels Kelburn
-Thursday,19:30:00,20:30:00,Level 3 comtemp,St Michaels Kelburn
-Saturday,14:00:00,14:45:00,Elem 3 Jazz,St Michaels Kelburn
-Saturday,14:45:00,15:30:00,Inter Found Ballet,St Michaels Kelburn
-Saturday,15:30:00,16:15:00,Inter 3 Jazz,St Michaels Kelburn
-Saturday,16:15:00,17:15:00,Adv 1 & 2 Ballet,St Michaels Kelburn
-Saturday,09:00:00,10:00:00,Intro to Dance,St Teresa's Karori
-Saturday,10:15:00,11:15:00,RSD Level 2,St Teresa's Karori
-Saturday,11:30:00,12:15:00,RSD Level 1,St Teresa's Karori
-Saturday,12:25:00,12:55:00,Beginner Jazz,St Teresa's Karori
-Saturday,13:00:00,13:30:00,Beginner Ballet,St Teresa's Karori
+DayOrder,Day,Start,End,Title,Site
+1,Monday,16:15:00,17:15:00,Inter 2 Jazz,St Michaels Kelburn
+1,Monday,17:15:00,18:15:00,Inter 3 Jazz,St Michaels Kelburn
+1,Monday,18:15:00,19:15:00,Adv 1 Jazz,St Michaels Kelburn
+2,Tuesday,15:30:00,16:15:00,Grade 3 Ballet,St Michaels Kelburn
+2,Tuesday,16:15:00,17:00:00,Level 1 comtemp,St Michaels Kelburn
+2,Tuesday,17:00:00,17:45:00,Grade 4 Ballet,St Michaels Kelburn
+2,Tuesday,17:45:00,18:45:00,Grade 8 Ballet,St Michaels Kelburn
+2,Tuesday,18:45:00,19:30:00,Inter 2 Jazz,St Michaels Kelburn
+2,Tuesday,19:30:00,20:15:00,Inter Found Ballet,St Michaels Kelburn
+3,Wednesday,15:30:00,16:00:00,Beginner Jazz,St Michaels Kelburn
+3,Wednesday,16:05:00,16:35:00,Beginner Tap,St Michaels Kelburn
+3,Wednesday,16:40:00,17:25:00,Grade 3 Ballet,St Michaels Kelburn
+3,Wednesday,17:30:00,18:15:00,Level 5 Jazz,St Michaels Kelburn
+3,Wednesday,18:15:00,19:15:00,Adv 2 Ballet,St Michaels Kelburn
+3,Wednesday,19:15:00,20:15:00,Adv 1 Jazz,St Michaels Kelburn
+3,Wednesday,17:15:00,18:00:00,Inter Open Tap,St Teresa's Karori
+3,Wednesday,18:00:00,18:45:00,Adv Open Tap,St Teresa's Karori
+3,Wednesday,18:45:00,19:15:00,Beginer Adult Tap,St Teresa's Karori
+3,Wednesday,19:00:00,19:45:00,Inter Adult Tap,St Teresa's Karori
+4,Thursday,15:45:00,16:15:00,Beginner Ballet,St Michaels Kelburn
+4,Thursday,16:15:00,17:15:00,Elem 2 Jazz,St Michaels Kelburn
+4,Thursday,17:15:00,18:00:00,Grade 4 Ballet,St Michaels Kelburn
+4,Thursday,18:00:00,18:45:00,Elem 3 Jazz,St Michaels Kelburn
+4,Thursday,18:45:00,19:30:00,Level 2 comtemp,St Michaels Kelburn
+4,Thursday,19:30:00,20:30:00,Level 3 comtemp,St Michaels Kelburn
+5,Friday,00:00:00,23:59:00,No Classes on Friday,St Michaels Kelburn
+6,Saturday,14:00:00,14:45:00,Elem 3 Jazz,St Michaels Kelburn
+6,Saturday,14:45:00,15:30:00,Inter Found Ballet,St Michaels Kelburn
+6,Saturday,15:30:00,16:15:00,Inter 3 Jazz,St Michaels Kelburn
+6,Saturday,16:15:00,17:15:00,Adv 1 & 2 Ballet,St Michaels Kelburn
+6,Saturday,09:00:00,10:00:00,Intro to Dance,St Teresa's Karori
+6,Saturday,10:15:00,11:15:00,RSD Level 2,St Teresa's Karori
+6,Saturday,11:30:00,12:15:00,RSD Level 1,St Teresa's Karori
+6,Saturday,12:25:00,12:55:00,Beginner Jazz,St Teresa's Karori
+6,Saturday,13:00:00,13:30:00,Beginner Ballet,St Teresa's Karori
+7,Sunday,00:00:00,23:59:00,No Classes on Sunday,St Michaels Kelburn

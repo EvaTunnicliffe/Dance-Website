@@ -26,6 +26,7 @@ create table news(
 
 create table classes(
     class_id integer primary key autoincrement not null,
+    dayorder integer not null,
     day text not null,
     startdatetime date not null,
     enddatetime date not null,

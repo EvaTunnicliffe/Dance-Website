@@ -49,18 +49,16 @@ LA Dance
   <div class = "row">
     <div class="col-md-4 notices ">
       <h4><b>---- Today's Classes ----</b></h4>
-        <p><b>Date: Monday 4th April 2023</b></p>
-        <p>3:00pm - 3:30pm: Intro to Jazz</p>
-        <p>3:30pm - 4:15pm: Grade 3 Ballet</p>
-        <p>4:15pm - 5:00pm: Level 1 Contemporary</p>
-        <p>5:00pm - 5:45pm: Grade 4 Ballet</p>
-        <p>5:45pm - 6:45pm: Adv 1/Grade 8 Ballet</p>
-        <p>6:45pm - 7:30pm: Inter 2 Jazz</p>
-        <p>7:30pm - 8:15pm: Inter Found Ballet</p>
+
+        {% for row in day_classes %}
+
+        <div class="">
+            <p>{{row['startdatetime']}} - {{row['enddatetime']}}: {{row['title']}}</p>
+        </div>
 
 
-
-      </div>
+      {% endfor %}
+ </div>
 
       <div class = "col-md-8 p-4">
         <h3 class="line_across"><b>About LA Dance</b></h3>

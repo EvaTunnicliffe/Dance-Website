@@ -1,8 +1,9 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, session
 from db_functions import run_search_query_tuples, run_commit_query
 from datetime import datetime
 
 app = Flask(__name__)
+app.secret_key = "sgdjkdgjdfgkdjfgk"
 db_path = 'data/dance_db.sqlite'
 
 
@@ -15,12 +16,29 @@ def newsdate(sqlite_dt):
 
 @app.route('/')
 def index():
-    return render_template("index.html")
+    sql = "select strftime('%w',date('now', 'localtime')) as date"
+    result = run_search_query_tuples(sql,(),db_path,True)
+    day_num = result[0]['date']
+    sql = """ select class_id, dayorder, day, startdatetime, enddatetime, title, site 
+    from classes
+    where dayorder = ?"""
+    values_tuple = (day_num, )
+    result = run_search_query_tuples(sql, values_tuple, db_path, True)
+    print(result)
+    for x in result:
+        for y in x.keys():
+            print(x[y])
+
+    return render_template("index.html", day_classes=result )
 
 
 @app.route('/classes')
 def classes():
-    return render_template("classes.html")
+    sql = """select class_id, dayorder,day, startdatetime, enddatetime, title, site 
+    from classes
+    order by dayorder asc"""
+    result = run_search_query_tuples(sql,(),db_path, True)
+    return render_template("classes.html", classes=result)
 
 
 @app.route('/teachers')
@@ -109,8 +127,8 @@ def news_cud():
             # add the new news entry to the database
             # member is fixed for now
             sql = """insert into news(title, subtitle, content, newsdate, member_id)
-                        values(?,?,?,datetime('now', 'localtime'),2)"""
-            values_tuple = (f['title'], f['subtitle'], f['content'])
+                        values(?,?,?,datetime('now', 'localtime'),?)"""
+            values_tuple = (f['title'], f['subtitle'], f['content'], session['member_id'])
             result = run_commit_query(sql, values_tuple, db_path)
             return redirect(url_for('notices'))
 
@@ -123,26 +141,34 @@ def news_cud():
 
 @app.route('/login', methods=["GET", "POST"])
 def login():
+    print(session)
     error = "Your credentials are not recognised"
     if request.method == "GET":
-        return render_template("/login.html", email='vanny@yahoo.com', password='temp')
+        return render_template("/login.html", email='m@g.com', password='temp')
     elif request.method == "POST":
         f=request.form
-        print(f)
-        sql = """select name, password, authorisation from member where email = ?"""
+        sql = """select member_id, name, password, authorisation from member where email = ?"""
         values_tuple=(f['email'],)
         result = run_search_query_tuples(sql, values_tuple, db_path, True)
         if result:
             result = result[0]
             if result['password'] == f['password']:
-                print("Login okay")
+                # Start a session
+                session['name'] = result['name']
+                session['authorisation'] = result['authorisation']
+                session['member_id'] = result['member_id']
                 return redirect(url_for('index'))
+
             else:
                 return render_template("/login.html", email='vanny@yahoo.com', password='temp', error=error)
 
         else:
             return render_template("/login.html", email='vanny@yahoo.com', password='temp', error=error)
 
+@app.route('/logout')
+def logout():
+    session.clear()
+    return redirect(url_for('index'))
 
 
 if __name__ == "__main__":
